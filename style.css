@@ -1,0 +1,503 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    background: #EEF0F2;
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+
+/* Navbar Style Start */
+
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: #1A2C55;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; 
+}
+
+.logo {
+    font-weight: 500;
+    color: #EEF0F2;
+    margin-top: 10px;
+}
+
+.menu {
+    display: flex;
+    margin-top: 5px;
+}
+
+.menu a {
+    color: #EEF0F2;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-align: center;
+    padding: 18px 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    background: #EEF0F2;
+    color: #1A2C55;
+}
+
+.menu a:not(:last-child) {
+    margin-right: 30px;
+}
+
+/* Navbar Style End */
+
+/* Hamburger menu start */
+.hamburger-menu {
+    display: none;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #EEF0F2;
+    margin: 5px 0;
+}
+
+/* Humburger menu Style End */
+
+/* Home Style Start */
+/* .home {
+    position: relative;
+    width: 100%;
+    height: 590px; /
+    
+}
+
+.bghome {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bghome img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logobesar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #EEF0F2;
+}
+
+.logobesar img {
+    width: 325px;
+    height: 325px;
+}
+
+.logobesar h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.logobesar h3 {
+    font-size: 15px;
+    font-style: italic;
+    max-width: 80%;
+    margin: 0 auto;
+} */
+
+/* Home Style End */
+
+.paralax{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+}
+
+#text{
+    position: absolute;
+    margin-top: 50px;
+    font-size: 5.6em;
+    color: #1A2C55;
+    text-shadow: 2px 2px 4px #B5B6B8;
+
+}
+
+.paralax img {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.analyst {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: #1A2C55;
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.analyst-content {
+    text-align: center;
+    
+    transform: translate(-30%, -150%);
+}
+
+.glossary {
+    width: 100%;
+    height: 500px;
+    background-color: #0080ff;
+    margin-top: 0px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.glossary-content {
+    text-align: justify;
+    
+    transform: translate(30%, -150%);
+}
+
+.team {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #EEF0F2;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.center h2{
+    font-weight: bold;
+    font-size: 3rem;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    color: #1A2C55;
+    
+}
+
+.team-content {
+    width: 90%;
+    max-width: 1350px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.team-content img {
+    width: 70%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.box-team{
+    padding: 16px;
+    background: #1A2C55;
+    border-radius: 15px;
+    transition: all .38s ease;
+}
+
+.box-team h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: #EEF0F2;
+    margin-bottom: 8px;
+}
+
+.box-team h5{
+    font-size: 12px;
+    font-weight: 300;
+    color: #EEF0F2;
+    margin-bottom: 8px;
+}
+
+.icons i{
+    display: inline-block;
+    color: #EEF0F2;
+    font-size: 20px;
+    margin: 0 8px;
+    transition: all .38s ease;
+}
+
+.box-team:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+
+/* Contact Style Start */
+.contact {
+    width: 100%;
+    height: 610px;
+    background-color: #2F2E30;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content {
+    text-align: center;
+    color: #EEF0F2;
+    margin-top: 30px;
+}
+
+.contact .contact-content h2{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: antiquewhite;
+}
+
+.containercontact{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+.containercontact .contactinfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.containercontact .contactinfo .box{
+    position: relative;
+    padding: 20px;
+    display: flex;
+}
+
+.containercontact .contactinfo .box .icon {
+    min-width: 40px;
+    height: 40px;
+    background: #EEF0F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.containercontact .contactinfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 15px;
+    color: #EEF0F2;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.containercontact .contactinfo .box .text h3{
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: antiquewhite;
+}
+
+.contactform {
+    width: 40%;
+    padding: 40px;
+    margin-top: 20px;
+    background: rgb(196, 181, 160);
+    border-radius: 2%;
+}
+
+.contactform h2 {
+    font-size: 25px;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #333; /* Warna garis bawah */
+    text-decoration-style: solid; /* Gaya garis bawah (misalnya: solid, dashed, dotted) */
+    text-decoration-thickness: 2px; /* Ketebalan garis bawah (dalam CSS3) */
+}
+
+.contactform .inputbox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    
+}
+
+.contactform .inputbox input,
+.contactform .inputbox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+    background: rgb(196, 181, 160);
+}
+
+.contactform .inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5x;
+    color: #666;
+}
+
+.contactform .inputbox input:focus ~ span,
+.contactform .inputbox input:valid ~ span,
+.contactform .inputbox textarea:focus ~ span,
+.contactform .inputbox textarea:valid ~ span {
+    color: antiquewhite;
+    font-size: 13px;
+    font-weight: 200;
+    transform: translateY(-20px);
+}
+
+.contactform .inputbox input[type="submit"] {
+    width: 100px;
+    background: antiquewhite;
+    color: #2F2E30;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Contact Style End */
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        margin-right: 20px; 
+    }
+
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        background-color: #333;
+        width: 100%;
+    }
+
+    .menu.active a {
+        margin: 10px 0;
+    }
+
+    #text {
+        font-size: 3em; 
+        margin-left: 20px; 
+    }
+
+    .contact {
+        padding: 50px;
+        margin-left: -50px;
+    }
+
+    .contact-content {
+        text-align: center;
+    }
+
+    .containercontact {
+        flex-direction: column;
+    }
+
+    .containercontact .contactinfo {
+        margin-bottom: 40px;
+    }
+
+    .containercontact .contactinfo,
+    .contactform {
+        width: 100%;
+    }
+
+    .contactform {
+        width: 70%; /* Misalnya, dapat disesuaikan sesuai kebutuhan */
+        padding: 20px; /* Misalnya, dapat disesuaikan sesuai kebutuhan */
+        margin-top: 20px; /* Misalnya, dapat disesuaikan sesuai kebutuhan */
+        margin-right: 0; /* Menghilangkan margin kanan */
+        margin-left: 0; /* Menghilangkan margin kiri */
+        background: rgb(196, 181, 160);
+        border-radius: 2%;
+    }
+    .team{
+        width: 100%;
+        height: auto;
+        padding: 90px 2%;
+    }
+    .center h2{
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .menu a {
+        font-size: 12px; 
+        padding: 15px 10px; 
+    }
+
+    #text {
+        font-size: 4.5em; 
+        margin-left: 20px; 
+    }
+
+    .hamburger-menu {
+        margin-right: 10px;
+    }
+
+    .team{
+        width: 100%;
+        height: auto;
+        padding: 90px 2%;
+    }
+    .center h2{
+        font-size: 2.8rem;
+    }
+}
+
+
