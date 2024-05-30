@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Navbar Style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #EEF0F2;
+}
+
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1A2C55;
+    padding: 10px 20px;
+    z-index: 999;
+}
+
+.logo {
+    color: #EEF0F2;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.menu {
+    display: flex;
+    margin-top: 5px;
+}
+
+.menu a {
+    color: #EEF0F2;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-align: center;
+    padding: 18px 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    color: #FFB703;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #EEF0F2;
+    margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #1A2C55;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center; 
+    }
+
+    .menu a {
+        padding: 10px;
+        border-top: 1px solid #FFB703;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+.paralax{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#text{
+    position: absolute;
+    margin-top: 50px;
+    font-size: 5.6em;
+    color: #1A2C55;
+    text-shadow: 2px 2px 4px #B5B6B8;
+
+}
+
+.paralax img {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+/* Navbar Style End */
+
+.home
+.analyst,
+.glossary,
+.team,
+.contact {
+    padding: 100px 20px;
+}
+
+.analyst-content,
+.glossary-content,
+.team-content,
+.contact-content {
+    max-width: 1500px;
+    margin: auto;
+    background: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.analyst-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid #1A2C55;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #1A2C55;
+    color: #EEF0F2;
+}
+
+#chartContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#chartContainer canvas {
+    max-width: 30%;
+}
+
+.glossary h2,
+.team h2,
+.contact h2 {
+    color: #1A2C55;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.glossary p,
+.contact p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+.glossary-content {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.glossary h2 {
+    text-align: center;
+}
+
+.glossary-item {
+    margin-bottom: 20px;
+}
+
+.glossary-item header {
+    background-color: #f1f1f1;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.glossary-item header:hover {
+    background-color: #e1e1e1;
+}
+
+.glossary-item header h3 {
+    margin: 0;
+}
+
+.glossary-item .content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #f1f1f1;
+    border-top: none;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+h2 {
+    color: #1A2C55;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.team-content .card {
+    width: 200px;
+    margin: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.team-content.card:hover {
+    transform: scale(1.05);
+}
+
+.imgBx {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.imgBx img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contentBx {
+    padding: 20px;
+}
+
+.contentBx h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.size h3 {
+    font-size: 1rem;
+    color: #1A2C55;
+    margin: 10px 0;
+}
+
+.contact {
+    background: #EEF0F2;
+}
+
+.containercontact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contactinfo,
+.contactform {
+    flex: 1;
+    padding: 20px;
+}
+
+.contactinfo .box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contactinfo .box .icon {
+    font-size: 2rem;
+    color: #1A2C55;
+    margin-right: 20px;
+}
+
+.contactinfo .box .text h3 {
+    font-size: 1.2rem;
+    color: #1A2C55;
+    margin-bottom: 5px;
+}
+
+.contactinfo .box .text p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.contactform h2 {
+    font-size: 1.5rem;
+    color: #1A2C55;
+    margin-bottom: 20px;
+}
+
+.contactform .inputbox {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.contactform .inputbox input,
+.contactform .inputbox textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    resize: none;
+}
+
+.contactform .inputbox span {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #666;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.contactform .inputbox input:focus ~ span,
+.contactform .inputbox textarea:focus ~ span,
+.contactform .inputbox input:valid ~ span,
+.contactform .inputbox textarea:valid ~ span {
+    top: -10px;
+    left: 10px;
+    color: #1A2C55;
+    font-size: 0.8rem;
+    background: #EEF0F2;
+    padding: 0 5px;
+}
+
+.contactform .inputbox input[type="submit"] {
+    background: #1A2C55;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contactform .inputbox input[type="submit"]:hover {
+    background: #FFB703;
+}
+
