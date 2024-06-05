@@ -58,8 +58,16 @@ body {
     text-transform: uppercase;
 }
 .menu.active {
-    max-height: 300px; /* Tampilkan menu saat aktif */
+    display: flex; /* Tampilkan menu saat aktif */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #1A2C55;
+    z-index: 1000; /* Pastikan menu terlihat di atas elemen lainnya */
 }
+
 
 .menu a:hover {
     color: #FFB703;
