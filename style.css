@@ -1,40 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Navbar Style */
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
-html,
 body {
-    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background: #EEF0F2;
-    font-family: sans-serif;
-    min-height: 100vh;
 }
 
-/* Navbar Style Start */
-
-.header {
-    position: fixed;
-    width: 100%;
-    background-color: #1A2C55;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px 0; 
-}
 
 .navbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px; 
+    background: #1A2C55;
+    padding: 10px 20px;
+    z-index: 999;
 }
 
 .logo {
-    font-weight: 500;
     color: #EEF0F2;
-    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
-
+.logo img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
 .menu {
     display: flex;
     margin-top: 5px;
@@ -50,93 +57,60 @@ body {
     font-weight: bold;
     text-transform: uppercase;
 }
+.menu.active {
+    max-height: 300px; /* Tampilkan menu saat aktif */
+}
 
 .menu a:hover {
-    background: #EEF0F2;
-    color: #1A2C55;
+    color: #FFB703;
 }
 
-.menu a:not(:last-child) {
-    margin-right: 30px;
-}
-
-/* Navbar Style End */
-
-/* Hamburger menu start */
 .hamburger-menu {
     display: none;
+    flex-direction: column;
+    cursor: pointer;
 }
 
-.bar {
+.hamburger-menu .bar {
     width: 25px;
     height: 3px;
     background-color: #EEF0F2;
-    margin: 5px 0;
+    margin: 3px 0;
 }
 
-/* Humburger menu Style End */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #1A2C55;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center; 
+    }
 
-/* Home Style Start */
-/* .home {
-    position: relative;
-    width: 100%;
-    height: 590px; /
-    
+    .menu a {
+        padding: 10px;
+        border-top: 1px solid #FFB703;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
 }
-
-.bghome {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.bghome img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.logobesar {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #EEF0F2;
-}
-
-.logobesar img {
-    width: 325px;
-    height: 325px;
-}
-
-.logobesar h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.logobesar h3 {
-    font-size: 15px;
-    font-style: italic;
-    max-width: 80%;
-    margin: 0 auto;
-} */
-
-/* Home Style End */
-
 .paralax{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 550px;
+    height: 100vh;
 }
 
 #text{
     position: absolute;
     margin-top: 50px;
-    font-size: 5.6em;
+    font-size: 4em;
     color: #1A2C55;
     text-shadow: 2px 2px 4px #B5B6B8;
 
@@ -149,355 +123,309 @@ body {
     width: 100%;
     pointer-events: none;
 }
+/* Navbar Style End */
 
-.analyst {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    background-color: #1A2C55;
-    margin-top: 75px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.home
+.analyst,
+.glossary,
+.team,
+.contact {
+    padding: 100px 20px;
+}
+
+.analyst-content,
+.glossary-content,
+.team-content,
+.contact-content {
+    max-width: 1500px;
+    margin: auto;
+    background: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 8px;
 }
 
 .analyst-content {
-    text-align: center;
-    
-    transform: translate(-30%, -150%);
-}
-
-.glossary {
-    width: 100%;
-    height: 500px;
-    background-color: #0080ff;
-    margin-top: 0px;
     display: flex;
-    justify-content: left;
+    flex-direction: column;
     align-items: center;
 }
 
-.glossary-content {
-    text-align: justify;
-    
-    transform: translate(30%, -150%);
+.dataTables_wrapper {
+    width: 100%;
+    overflow-x: auto; /* Untuk scroll horizontal */
 }
 
-.team {
-    position: relative;
+table {
     width: 100%;
-    height: auto;
-    background-color: #EEF0F2;
-    margin-top: 0px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #1A2C55;
+    padding: 8px 12px;
+    text-align: left;
+    white-space: nowrap; /* Agar tidak terpotong */
+}
+
+th {
+    background-color: #1A2C55;
+    color: #EEF0F2;
+}
+
+/* CSS untuk layar kecil */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead tr {
+        display: none;
+    }
+    tr {
+        margin-bottom: 10px;
+    }
+    td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #ddd;
+    }
+    td::before {
+        content: attr(data-label);
+        flex: 1;
+        font-weight: bold;
+        padding-right: 10px;
+    }
+}
+
+#chartContainer {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 30px;
+    width: 100%;
 }
 
-.center h2{
-    font-weight: bold;
-    font-size: 3rem;
-    margin-top: 30px;
-    margin-bottom: 5px;
+#chartContainer canvas {
+    max-width: 30%;
+}
+
+.glossary h2,
+.team h2,
+.contact h2 {
     color: #1A2C55;
-    
-}
-
-.team-content {
-    width: 90%;
-    max-width: 1350px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-    align-items: center;
-    gap: 2rem;
+    font-size: 2rem;
     text-align: center;
-    margin-top: 4rem;
+    margin-bottom: 20px;
 }
 
-.team-content img {
-    width: 70%;
-    height: auto;
-    border-radius: 15px;
-    margin-bottom: 15px;
+.glossary p,
+.contact p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+.glossary-content {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.box-team{
-    padding: 16px;
-    background: #1A2C55;
-    border-radius: 15px;
-    transition: all .38s ease;
+.glossary h2 {
+    text-align: center;
 }
 
-.box-team h3{
-    font-size: 18px;
-    font-weight: 600;
-    color: #EEF0F2;
-    margin-bottom: 8px;
+.glossary-item {
+    margin-bottom: 20px;
 }
 
-.box-team h5{
-    font-size: 12px;
-    font-weight: 300;
-    color: #EEF0F2;
-    margin-bottom: 8px;
-}
-
-.icons i{
-    display: inline-block;
-    color: #EEF0F2;
-    font-size: 20px;
-    margin: 0 8px;
-    transition: all .38s ease;
-}
-
-.box-team:hover {
-    transform: translateY(-10px);
+.glossary-item header {
+    background-color: #f1f1f1;
+    padding: 10px;
     cursor: pointer;
 }
 
+.glossary-item header:hover {
+    background-color: #e1e1e1;
+}
 
-/* Contact Style Start */
-.contact {
-    width: 100%;
-    height: 610px;
-    background-color: #2F2E30;
-    margin-top: 0px;
+.glossary-item header h3 {
+    margin: 0;
+}
+
+.glossary-item .content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #f1f1f1;
+    border-top: none;
+}
+.center {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.contact-content {
+.team-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+h2 {
+    color: #1A2C55;
+    font-size: 2rem;
     text-align: center;
-    color: #EEF0F2;
-    margin-top: 30px;
+    margin-bottom: 20px;
+    
+}
+.team-content .card {
+    width: 200px;
+    margin: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s;
+    -webkit-transition: transform 0.3s;
+    -moz-transition: transform 0.3s;
+    -ms-transition: transform 0.3s;
+    -o-transition: transform 0.3s;
 }
 
-.contact .contact-content h2{
-    font-weight: bold;
-    font-size: 30px;
-    margin-bottom: 5px;
-    color: antiquewhite;
+.team-content.card:hover {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
 }
 
-.containercontact{
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-
+.imgBx {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
 }
 
-.containercontact .contactinfo {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+.imgBx img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.containercontact .contactinfo .box{
-    position: relative;
+.contentBx {
     padding: 20px;
-    display: flex;
 }
 
-.containercontact .contactinfo .box .icon {
-    min-width: 40px;
-    height: 40px;
-    background: #EEF0F2;
+.contentBx h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.size {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    font-size: 25px;
 }
 
-.containercontact .contactinfo .box .text {
+.size h3 {
+    font-size: 1rem;
+    color: #1A2C55;
+    margin: 10px 0;
+}
+
+.contact {
+    background: #EEF0F2;
+}
+
+.containercontact {
     display: flex;
-    margin-left: 20px;
-    font-size: 15px;
-    color: #EEF0F2;
-    flex-direction: column;
-    font-weight: 300;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.containercontact .contactinfo .box .text h3{
-    font-weight: 500;
-    font-size: 20px;
-    margin-bottom: 5px;
-    color: antiquewhite;
-}
-
+.contactinfo,
 .contactform {
-    width: 40%;
-    padding: 40px;
-    margin-top: 20px;
-    background: rgb(196, 181, 160);
-    border-radius: 2%;
+    flex: 1;
+    padding: 20px;
+}
+
+.contactinfo .box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contactinfo .box .icon {
+    font-size: 2rem;
+    color: #1A2C55;
+    margin-right: 20px;
+}
+
+.contactinfo .box .text h3 {
+    font-size: 1.2rem;
+    color: #1A2C55;
+    margin-bottom: 5px;
+}
+
+.contactinfo .box .text p {
+    font-size: 1rem;
+    color: #333;
 }
 
 .contactform h2 {
-    font-size: 25px;
-    color: #333;
-    font-weight: 500;
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-color: #333; /* Warna garis bawah */
-    text-decoration-style: solid; /* Gaya garis bawah (misalnya: solid, dashed, dotted) */
-    text-decoration-thickness: 2px; /* Ketebalan garis bawah (dalam CSS3) */
+    font-size: 1.5rem;
+    color: #1A2C55;
+    margin-bottom: 20px;
 }
 
 .contactform .inputbox {
     position: relative;
-    width: 100%;
-    margin-top: 10px;
-    
+    margin-bottom: 20px;
 }
 
 .contactform .inputbox input,
 .contactform .inputbox textarea {
     width: 100%;
-    padding: 5px 0;
-    font-size: 16px;
-    margin: 10px 0;
-    border: none;
-    border-bottom: 2px solid #333;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     outline: none;
     resize: none;
-    background: rgb(196, 181, 160);
 }
 
 .contactform .inputbox span {
     position: absolute;
-    left: 0;
-    padding: 5px 0;
-    font-size: 16px;
-    margin: 10px 0;
-    pointer-events: none;
-    transition: 0.5x;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1rem;
     color: #666;
+    pointer-events: none;
+    transition: all 0.3s ease;
 }
 
 .contactform .inputbox input:focus ~ span,
-.contactform .inputbox input:valid ~ span,
 .contactform .inputbox textarea:focus ~ span,
+.contactform .inputbox input:valid ~ span,
 .contactform .inputbox textarea:valid ~ span {
-    color: antiquewhite;
-    font-size: 13px;
-    font-weight: 200;
-    transform: translateY(-20px);
+    top: -10px;
+    left: 10px;
+    color: #1A2C55;
+    font-size: 0.8rem;
+    background: #EEF0F2;
+    padding: 0 5px;
 }
 
 .contactform .inputbox input[type="submit"] {
-    width: 100px;
-    background: antiquewhite;
-    color: #2F2E30;
-    border: none;
+    background: #1A2C55;
+    color: #fff;
     cursor: pointer;
-    padding: 10px;
-    font-size: 18px;
+    transition: background 0.3s ease;
 }
 
-/* Contact Style End */
-
-@media screen and (max-width: 768px) {
-    .menu {
-        display: none;
-    }
-
-    .hamburger-menu {
-        display: block;
-        cursor: pointer;
-        margin-right: 20px; 
-    }
-
-    .menu.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px; 
-        left: 0;
-        background-color: #333;
-        width: 100%;
-    }
-
-    .menu.active a {
-        margin: 10px 0;
-    }
-
-    #text {
-        font-size: 3em; 
-        margin-left: 20px; 
-    }
-
-    .contact {
-        padding: 50px;
-        margin-left: -50px;
-    }
-
-    .contact-content {
-        text-align: center;
-    }
-
-    .containercontact {
-        flex-direction: column;
-    }
-
-    .containercontact .contactinfo {
-        margin-bottom: 40px;
-    }
-
-    .containercontact .contactinfo,
-    .contactform {
-        width: 100%;
-    }
-
-    .contactform {
-        width: 70%; /* Misalnya, dapat disesuaikan sesuai kebutuhan */
-        padding: 20px; /* Misalnya, dapat disesuaikan sesuai kebutuhan */
-        margin-top: 20px; /* Misalnya, dapat disesuaikan sesuai kebutuhan */
-        margin-right: 0; /* Menghilangkan margin kanan */
-        margin-left: 0; /* Menghilangkan margin kiri */
-        background: rgb(196, 181, 160);
-        border-radius: 2%;
-    }
-    .team{
-        width: 100%;
-        height: auto;
-        padding: 90px 2%;
-    }
-    .center h2{
-        font-size: 1.8rem;
-    }
+.contactform .inputbox input[type="submit"]:hover {
+    background: #FFB703;
 }
-
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-    .menu a {
-        font-size: 12px; 
-        padding: 15px 10px; 
-    }
-
-    #text {
-        font-size: 4.5em; 
-        margin-left: 20px; 
-    }
-
-    .hamburger-menu {
-        margin-right: 10px;
-    }
-
-    .team{
-        width: 100%;
-        height: auto;
-        padding: 90px 2%;
-    }
-    .center h2{
-        font-size: 2.8rem;
-    }
-}
-
 
