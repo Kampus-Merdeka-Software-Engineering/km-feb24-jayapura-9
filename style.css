@@ -306,12 +306,20 @@ th {
   padding: 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 50px;
+  grid-gap: 15px;
+}
+.chart-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.chart-container canvas {
+  margin-top: 10px;
 }
 
-.pie-chart-container {
-  max-width: 400px; /* Adjust this value as needed */
-  margin: 0 auto; /* Center the pie chart horizontally */
+.pie-chart-container canvas {
+  margin: 10px auto 0 auto; /* Center the pie chart horizontally */
 }
 
 @media (max-width: 768px) {
