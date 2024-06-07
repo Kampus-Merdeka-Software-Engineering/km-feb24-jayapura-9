@@ -10,7 +10,10 @@
       href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css"
     />
     <!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- -->
@@ -51,7 +54,7 @@
     <section class="analyst" id="analyst">
       <div class="analyst-content">
         <h2>Analyst</h2>
-        <table class="display" id="dataTable" >
+        <table class="display" id="dataTable">
           <thead>
             <tr>
               <th>BOROUGH</th>
@@ -68,26 +71,24 @@
               <th>SALE DATE</th>
             </tr>
           </thead>
-          <tbody>
-
-          </tbody>
+          <tbody></tbody>
         </table>
 
-        <div class="container">
+        <div class="dashboard">
           <h2>NYC Property Sale - Jayapura</h2>
-    
+
           <div class="filter-container">
             <div class="dropdown">
               <button class="dropbtn">BOROUGH</button>
               <div class="dropdown-content" id="boroughFilter"></div>
             </div>
-    
+
             <div class="dropdown">
               <button class="dropbtn">BUILDING CLASS CATEGORY</button>
               <div class="dropdown-content" id="buildingClassFilter"></div>
             </div>
           </div>
-    
+
           <div class="stats-container">
             <div class="stat-item">
               <h3>Total Penjualan</h3>
@@ -106,23 +107,23 @@
               <p id="rataRataLuasTanah"></p>
             </div>
           </div>
-    
+
           <div class="charts-container">
             <div class="chart-container">
               <h3>Rata-Rata Luas Tanah dan Luas Bangunan</h3>
               <canvas id="lineAreaChart"></canvas>
             </div>
-    
+
             <div class="chart-container">
               <h3>Luas tanah dan bangunan pada tipe bangunan</h3>
               <canvas id="horizontalBarChart"></canvas>
             </div>
-    
-            <div class="chart-container">
+
+            <div class="pie-chart-container">
               <h3>Distribusi Penjualan per Borough</h3>
               <canvas id="pieChart"></canvas>
             </div>
-    
+
             <div class="chart-container">
               <h3>Tren Penjualan Bulanan</h3>
               <canvas id="monthlySalesChart"></canvas>
@@ -272,7 +273,11 @@
             <h3>Tax Classs At Time of Sale</h3>
           </header>
           <div class="content">
-            <p>New York City (NYC) property sales dataset that provides information on the tax classification applied to the property at the time of sale. This tax classification is important as it determines the tax rate applicable to the property.
+            <p>
+              New York City (NYC) property sales dataset that provides
+              information on the tax classification applied to the property at
+              the time of sale. This tax classification is important as it
+              determines the tax rate applicable to the property.
             </p>
           </div>
         </div>
@@ -499,7 +504,8 @@
             <img src="" alt="Team Member 1" />
           </div>
           <div class="contentBx">
-            <h2>April</h2>            <div class="social-icons" id="social-icons">
+            <h2>April</h2>
+            <div class="social-icons" id="social-icons">
               <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
               <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
@@ -562,5 +568,6 @@
     </section>
 
     <script src="script.js" type="module"></script>
+    <script src="chart.js" type="module"></script>
   </body>
 </html>
