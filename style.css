@@ -13,6 +13,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background: #eef0f2;
+  overflow-x: hidden; /* Ensure no horizontal scroll */
 }
 
 .navbar {
@@ -400,14 +401,27 @@ th {
   padding-top: 100px;
 }
 
-h2 {
+.team {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.team-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 50px; /* Sesuaikan jika diperlukan */
+  text-align: center;
+}
+
+.team h2 {
+  width: 100%; /* Menentukan lebar penuh agar berada di atas gambar */
   color: #1a2c55;
   font-size: 2rem;
-  text-align: center;
   margin-bottom: 20px;
 }
 
-.team-content .card {
+.card {
   width: 200px;
   margin: 20px;
   background: #fff;
@@ -421,7 +435,7 @@ h2 {
   -o-transition: transform 0.3s;
 }
 
-.team-content .card:hover {
+.card:hover {
   transform: scale(1.05);
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
@@ -567,5 +581,5 @@ h2 {
 }
 
 .contactform .inputbox input[type='submit']:hover {
-  background: #ffb703;
+  background: #008577;
 }
