@@ -131,7 +131,8 @@ body {
 }
 /* Navbar Style End */
 
-.home .analyst,
+.home,
+.analyst,
 .glossary,
 .team,
 .contact {
@@ -221,8 +222,7 @@ th {
 }
 
 /* Header styles */
-.container h1,
-.container h2 {
+.container h1, .container h2 {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -332,6 +332,7 @@ th {
   width: 100%;
 }
 
+.dashboard h2,
 .glossary h2,
 .team h2,
 .contact h2 {
